@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "AplikasiJajan/1.0.0": {
+      "PesenMinum/1.0.0": {
         "runtime": {
-          "AplikasiJajan.dll": {}
+          "PesenMinum.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "AplikasiJajan/1.0.0": {
+    "PesenMinum/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
