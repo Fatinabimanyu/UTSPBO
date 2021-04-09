@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace coffeec
+namespace pesenminum
 {
     class Program
     {
@@ -15,8 +15,8 @@ namespace coffeec
                 Console.WriteLine("1. Tambah Pesanan");
                 Console.WriteLine("2. Tampilkan semua pesanan yang ada");
                 Console.WriteLine("3. Tampilkan urutan pesanan");
-                Console.WriteLine("4. Berikan semua pesanan");
-                Console.Write("Masukan pilihan");
+                Console.WriteLine("4. Tampilkan yang sudah siap");
+                Console.Write("Masukan pilihan ");
                 var opt = Console.ReadLine();
 
                 switch (opt)
