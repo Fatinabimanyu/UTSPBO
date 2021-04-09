@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
-namespace pesenminum
+namespace PesenMinum
 {
     class Program
     {
@@ -23,13 +23,13 @@ namespace pesenminum
                 {
                     case "1":
                         var custOrder = new CustomerOrder();
-                        Console.Write("Masukan nama");
+                        Console.Write("Masukan nama ");
                         custOrder.Name = Console.ReadLine();
 
-                        Console.Write("Berapa cups?");
+                        Console.Write("Berapa cups? ");
                         custOrder.TotalCups = Convert.ToInt16(Console.ReadLine());
                         queueOfCustomerOrder.Enqueue(custOrder);
-                        Console.WriteLine("Pesanan ditambah");
+                        Console.WriteLine("Pesanan ditambah ");
 
                         break;
                     case "2":
@@ -46,7 +46,7 @@ namespace pesenminum
                     case "3":
                         if (queueOfCustomerOrder.Count > 0)
                         {
-                            Console.WriteLine($"{queueOfCustomerOrder.Peek().Name}'s pesanan masih dibikin");
+                            Console.WriteLine($"{queueOfCustomerOrder.Peek().Name}'s pesanan masih dibikin ");
                         }
                         else
                         {
@@ -56,7 +56,7 @@ namespace pesenminum
                     case "4":
                         if (queueOfCustomerOrder.Count > 0)
                         {
-                            Console.WriteLine($"{queueOfCustomerOrder.Peek().Name}'s pesanan siap");
+                            Console.WriteLine($"{queueOfCustomerOrder.Peek().Name}'s pesanan siap ");
                             queueOfCustomerOrder.Dequeue();
                         }
                         else
