@@ -2,7 +2,7 @@ using System.Globalization;
 using System;
 using System.Collections.Generic;
 
-namespace AplikasiJajan
+namespace PesenMinum
 {
     class Customer
     {

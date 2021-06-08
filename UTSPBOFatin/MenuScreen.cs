@@ -2,29 +2,29 @@ using System;
 using System.Collections.Generic;
 
 
-namespace AplikasiJajan
+namespace PesenMinum
 {
     class MenuScreen
     {
         public static void ShowMenu1()
         {
                 Console.WriteLine(" Selamat Datang... ");
-                Console.WriteLine("1. Tambah pesanan Customer");
+                Console.WriteLine("1. Tambah pesanan ");
                 Console.WriteLine("2. Tampilkan seluruh pesanan Customer");
-                Console.WriteLine("3. Tampilkan pesanan yang sedang dipersiapkan");
+                Console.WriteLine("3. Tampilkan pesanan yang sedang disiapkan");
                 Console.WriteLine("4. Kurangi pesanan yang sudah selesai");
                 Console.WriteLine("5. Exit");
-                Console.Write("Enter your option:");
+                Console.Write("Masukan pilihan");
         }
 
         public static void ShowMenu2()
         {
-            Console.WriteLine(" --------------------------------List Menu JajanBoba-------------------------------- ");
-            Console.WriteLine("|         Big Size          |       Regular Size        |         Small Size        |");
-            Console.WriteLine("| 1. Milktea with Pearl     | 4. Milktea with Pearl     | 7. Milktea with Pearl     |");
-            Console.WriteLine("| 2. Thaitea with Pudding   | 5. Thaitea with Pudding   | 8. Thaitea with Pudding   |");
-            Console.WriteLine("| 3. Matcha with Grass Jelly| 6. Matcha with Grass Jelly| 9. Matcha with Grass Jelly|");
-            Console.WriteLine("\n Masukkan pesanan Customer dengan memasukkan angka : ");
+            Console.WriteLine(" --------------------------------List Menu PesenMinum-------------------------------- ");
+            Console.WriteLine("|    Kecil   |   Sedang  |   Jumbo    |");
+            Console.WriteLine("| 1. Teh     | 4. Teh    | 7. Teh     |");
+            Console.WriteLine("| 2. Kopi    | 5. Kopi   | 8. Kopi   |");
+            Console.WriteLine("| 3. Susu    | 6. Susu   | 9. Susu  |");
+            Console.WriteLine("\n Masukkan pesanan dengan angka : ");
         }
         public string Excecute1()
         {
@@ -35,72 +35,63 @@ namespace AplikasiJajan
             switch(opt1)
             {
                 case "1":
-                    BigSize cup1 = new BigSize();
-                    cup1.AddDrink(new DrinkFlavor(Flavor.Milktea));
-                    cup1.AddTopping(new Pearl());
+                    Kecil cup1 = new Kecil();
+                    cup1.AddDrink(new DrinkFlavor(Flavor.Teh));
                     Console.WriteLine(cup1.Info());
-                    drinkName = "Milktea with Pearl";
+                    drinkName = "Teh";
                     break;
                 case "2":
-                    BigSize cup2 = new BigSize();
-                    cup2.AddDrink(new DrinkFlavor(Flavor.Thaitea));
-                    cup2.AddTopping(new Pudding());
+                    Kecil cup2 = new Kecil();
+                    cup2.AddDrink(new DrinkFlavor(Flavor.Kopi));
                     Console.WriteLine(cup2.Info());
-                    drinkName = "Thaitea with Pudding";
+                    drinkName = "Kopi";
                     break;              
                 case "3":
-                    BigSize cup3 = new BigSize();
-                    cup3.AddDrink(new DrinkFlavor(Flavor.Matcha));
-                    cup3.AddTopping(new GrassJelly());
+                    Kecil cup3 = new Kecil();
+                    cup3.AddDrink(new DrinkFlavor(Flavor.Susu));
                     Console.WriteLine(cup3.Info());
-                    drinkName = "Matcha with Grass Jelly";
+                    drinkName = "Susu   ";
                     break;
                 case "4":
-                    RegularSize cup4 = new RegularSize();
-                    cup4.AddDrink(new DrinkFlavor(Flavor.Milktea));
-                    cup4.AddTopping(new Pearl());
+                    Sedang cup4 = new Sedang();
+                    cup4.AddDrink(new DrinkFlavor(Flavor.Teh));
                     Console.WriteLine(cup4.Info());
-                    drinkName = "Milktea with Pearl";
+                    drinkName = "Teh";
                     break;
                 case "5":
-                    RegularSize cup5 = new RegularSize();
-                    cup5.AddDrink(new DrinkFlavor(Flavor.Thaitea));
-                    cup5.AddTopping(new Pudding());
+                    Sedang cup5 = new Sedang();
+                    cup5.AddDrink(new DrinkFlavor(Flavor.Kopi));
                     Console.WriteLine(cup5.Info());
-                    drinkName = "Thaitea with Pudding";
+                    drinkName = "Kopi";
                     break;
                 case "6":
-                    RegularSize cup6 = new RegularSize();
-                    cup6.AddDrink(new DrinkFlavor(Flavor.Matcha));
-                    cup6.AddTopping(new GrassJelly());
+                    Sedang cup6 = new Sedang();
+                    cup6.AddDrink(new DrinkFlavor(Flavor.Susu));
                     Console.WriteLine(cup6.Info());
-                    drinkName = "Matcha with Grass Jelly";                    
+                    drinkName = "Susu   ";                    
                     break;
 
                 case "7":
-                    SmallSize cup7 = new SmallSize();
-                    cup7.AddDrink(new DrinkFlavor(Flavor.Milktea));
-                    cup7.AddTopping(new Pearl());
+                    Jumbo cup7 = new Jumbo();
+                    cup7.AddDrink(new DrinkFlavor(Flavor.Teh));
                     Console.WriteLine(cup7.Info());
-                    drinkName = "Milktea with Pearl";
+                    drinkName = "Teh";
                     break;
 
                 case "8":
-                    SmallSize cup8 = new SmallSize();
-                    cup8.AddDrink(new DrinkFlavor(Flavor.Thaitea));
-                    cup8.AddTopping(new Pudding());
+                    Jumbo cup8 = new Jumbo();
+                    cup8.AddDrink(new DrinkFlavor(Flavor.Kopi));
                     Console.WriteLine(cup8.Info());
-                    drinkName = "Thaitea with Pudding";                    
+                    drinkName = "Kopi";                    
                     break;
                 case "9":
-                    SmallSize cup9 = new SmallSize();
-                    cup9.AddDrink(new DrinkFlavor(Flavor.Matcha));
-                    cup9.AddTopping(new GrassJelly());
+                    Jumbo cup9 = new Jumbo();
+                    cup9.AddDrink(new DrinkFlavor(Flavor.Susu));
                     Console.WriteLine(cup9.Info());
-                    drinkName = "Matcha with Grass Jelly";                    
+                    drinkName = "Susu   ";                    
                     break;
                 default:
-                    Console.WriteLine("Invalid Option");
+                    Console.WriteLine("Salah angka");
                     drinkName = "0";
                     break;
 
@@ -121,7 +112,7 @@ namespace AplikasiJajan
                 {
                     case "1":
                         var custOrder = new Customer();
-                        Console.Write("Masukan nama Customer:");
+                        Console.Write("Masukan nama :");
                         custOrder.Name = Console.ReadLine();
 
                         custOrder.DrinkName = Excecute1();
@@ -174,7 +165,7 @@ namespace AplikasiJajan
 
                         break;
                     default:
-                        Console.WriteLine("Invalid option.");
+                        Console.WriteLine("Salah pilihan");
                         break;
                 }          
                 Console.ReadKey();    

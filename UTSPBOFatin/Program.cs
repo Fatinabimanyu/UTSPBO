@@ -1,12 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 
-namespace AplikasiJajan
+namespace PesenMinum
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            MenuScreen menu = new MenuScreen();
+
+            menu.Excecute2();
+
         }
     }
 }

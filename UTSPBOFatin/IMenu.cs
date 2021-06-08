@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace AplikasiJajan
+namespace PesenMinum
 {
     public interface IMenu
     {

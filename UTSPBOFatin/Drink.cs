@@ -1,19 +1,18 @@
 using System;
 using System.Collections.Generic;
 
-namespace AplikasiJajan
+namespace PesenMinum
 {
     public abstract class Drink
     {
         public int price {get; set;}
 
-        public List<Topping> topping;
         public List<DrinkFlavor> drinkFlavor;
 
         public Drink()
         {
-            this.price = 10000;
-            this.topping = new List<Topping>();
+            this.price = 12000;
+ 
             this.drinkFlavor = new List<DrinkFlavor>();
         }
 
@@ -21,10 +20,7 @@ namespace AplikasiJajan
         {
           int totalPrice = this.price;
 
-          foreach(var t in this.topping)
-          {
-              totalPrice += t.price;
-          }
+          
           foreach(var d in this.drinkFlavor)
           {
               totalPrice += d.price;
@@ -37,10 +33,6 @@ namespace AplikasiJajan
             this.drinkFlavor.Add(d);
         }
 
-        public void AddTopping(Topping t)
-        {
-            this.topping.Add(t);
-        }
 
         public string GetDrink()
         {
@@ -52,15 +44,7 @@ namespace AplikasiJajan
            return infDrink;
         }
 
-        public string GetTopping()
-        {
-            string infTopping =string.Empty;
-            foreach(Topping df in this.topping)
-           {
-               infTopping += df.Info();
-           }
-           return infTopping;
-        }
+       
 
        public string Info()
        {
@@ -70,7 +54,7 @@ namespace AplikasiJajan
 
            info += this.GetDrink();
 
-           info += this.GetTopping();
+
            info += "-------------------------------\n";
 
            info += $"total\t{this.CalculatePrice()}\n";

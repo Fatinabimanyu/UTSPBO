@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 
-namespace AplikasiJajan
+namespace PesenMinum
 {
-    public enum Flavor { Milktea, Thaitea, Matcha}
+    public enum Flavor { Teh, Kopi, Susu}
     
     public class DrinkFlavor : IMenu
     {
@@ -15,9 +15,9 @@ namespace AplikasiJajan
             get { return this.flavor.ToString(); }
         }
 
-        public DrinkFlavor() : this(Flavor.Milktea)
+        public DrinkFlavor() : this(Flavor.Teh)
         {
-            //Default rasa Milktea
+            //Default rasa Teh
         }
         public DrinkFlavor(Flavor f)
         {
